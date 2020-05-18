@@ -72,7 +72,7 @@
 |third order|0.9255|0.9254|0.9524|0.9482|48/165|
 |fourth order|0.9281|0.9282|0.9514|0.9512|60/495|
 
-**小結** | 嘗試6種結構皆為LASSO的迴歸模型，testing R^2和accuracy分別可以達到0.9282與0.9512。加入較高次項的變數並且考慮交互作用，有利於提高預測能力，並且驗證了Data Analysis中提到，變數與stab有非線性的問題。我們觀察到資料擴展到三次項以後，有嚴重的heavy-tail問題，並且在R^2和accuracy的表現上，沒有顯著優於second order的模型，所以我認為second order為最佳的模型。
+**小結** |　嘗試6種結構皆為LASSO的迴歸模型，testing R^2和accuracy分別可以達到0.9282與0.9512。加入較高次項的變數並且考慮交互作用，有利於提高預測能力，並且驗證了Data Analysis中提到，變數與stab有非線性的問題。我們觀察到資料擴展到三次項以後，有嚴重的heavy-tail問題，並且在R^2和accuracy的表現上，沒有顯著優於second order的模型，所以我認為second order為最佳的模型。
 
 ### Conclusion
 這個專題我們試圖回答兩個問題：如何預測系統是否stable以及哪些變數為重要變數。

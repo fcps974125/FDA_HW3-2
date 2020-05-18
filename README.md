@@ -83,4 +83,4 @@
 
 2. 哪些變數為重要變數?
 
-    利用LASSO可以做變數選擇的優勢，我們利用BIC作為模型選擇的指標，並且得到顯著影響模型的變數為tau1、tau2、tau3、tau4、tau1^2、tau1tau2、tau1tau3、tau1tau4、tau1g1、tau2^2、tau2tau3、tau2tau4、tau2g2、tau3^2、tau3tau4、tau3g3、tau4^2、tau4g4、g1^2、g2^2、g3^2，共21個。可以發現tau的四個變數在一次項、二次項以及交互作用，都有顯著的影響。g的四個變數則是在二次項以及交互作用有顯著影響。
+    利用LASSO可以做變數選擇的優勢，我們採用BIC作為模型選擇的指標，最終在second order 得到顯著影響模型的變數為tau1、tau2、tau3、tau4、tau1^2、tau1tau2、tau1tau3、tau1tau4、tau1g1、tau2^2、tau2tau3、tau2tau4、tau2g2、tau3^2、tau3tau4、tau3g3、tau4^2、tau4g4、g1^2、g2^2、g3^2，共21個。可以發現tau的四個變數在一次項、二次項以及交互作用，都有顯著的影響。g的四個變數則是在二次項以及交互作用有顯著影響。

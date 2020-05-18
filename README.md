@@ -56,12 +56,14 @@
     
 4. Fitting data with second order interaction
     - 嘗試以增加2次項來提升準確度，R^2與accuracy有明顯的提升，代表非線性關係也可能來自於變數本身。
+    - 變數增加到45個，其中有21個變數為顯著變數。
     - 從normal probability plot可以發現，殘差有heavy-tail的問題，常態假設可能不成立。
     
     
 5. Fitting data with third/fourth order interaction
+    - third: 變數增加到165個，其中有48個變數為顯著變數。fourth: 變數增加到495個，其中有60個變數為顯著變數。
     - 加入更高次項，R^2與accuracy有提升
-    - 從normal probability plot可以發現，殘差有嚴重heavy-tail的問題，常態假設不成立。
+    - 從normal probability plot可以發現，常態假設不成立，殘差有嚴重heavy-tail的問題，代表三次項以上並不適合。
 
 |model|train R^2|test R^2|train acc|test acc|#variable|
 |-|-|-|-|-|-|

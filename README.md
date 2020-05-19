@@ -25,13 +25,15 @@
 
 3. Data correlation
     - 所有變數與stab的相關係數都在0.4以下
-    - 變數之間的共線性不高
-    - tau與g有機會是重要變數
+    - p1與p2~p4的相關係數為0.58左右(可能有共線性問題)
+    - 其餘變數之間的共線性不高
+    - tau與g有機會是重要變數(相關係數介於0.28~0.31)
+    - p為較無關的變數(相關係數介於-0.02~0.01)
         
-**小結** |　不需要做遺失值處理；tau與g的8個變數可能為重要變數；tau可能與stab有非線性關係；不需要著墨於共線性的問題。
+**小結** |　不需要做遺失值處理；tau與g的8個變數可能為重要變數；tau可能與stab有非線性關係；刪除p1後，不需要著墨於共線性的問題。
 
 ### Modeling
-這部分選擇的模型為LASSO with BIC，主要的考量為LASSO利用l1 regularization，可以幫助變數我們做篩選，與我們的目標一致(挑選出影響穩定性的重要變數)。資料經過normalize的處理。隨機選擇5000筆資料作為training data，另外5000筆作為testing data，並且同時考慮training R^2、testing R^2、training accuracy、testing accuracy以及常態假設，作為選擇模型的依據。
+這部分選擇的模型為LASSO with BIC，主要的考量為LASSO利用l1 regularization，可以幫助變數我們做篩選，與我們的目標一致(挑選出影響穩定性的重要變數)。資料經過normalize的處理，並且刪去p1。隨機選擇5000筆資料作為training data，另外5000筆作為testing data，並且同時考慮training R^2、testing R^2、training accuracy、testing accuracy以及常態假設，作為選擇模型的依據。
 
 
 1. Fitting raw data

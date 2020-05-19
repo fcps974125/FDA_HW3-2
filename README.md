@@ -30,14 +30,15 @@
     - tau與g有機會是重要變數(相關係數介於0.28~0.31)
     - p為較無關的變數(相關係數介於-0.02~0.01)
         
-**小結** |　不需要做遺失值處理；tau與g的8個變數可能為重要變數；tau可能與stab有非線性關係；刪除p1後，不需要著墨於共線性的問題。
+**小結** |　不需要做遺失值處理；tau與g的8個變數可能為重要變數；tau可能與stab有非線性關係；需要處理共線性的問題。
 
 ### Modeling
-這部分選擇的模型為LASSO with BIC，主要的考量為LASSO利用l1 regularization，可以幫助變數我們做篩選，與我們的目標一致(挑選出影響穩定性的重要變數)。資料經過normalize的處理，並且刪去p1。隨機選擇5000筆資料作為training data，另外5000筆作為testing data，並且同時考慮training R^2、testing R^2、training accuracy、testing accuracy以及常態假設，作為選擇模型的依據。
+這部分選擇的模型為LASSO with BIC，主要的考量為LASSO利用l1 regularization，可以做到變數篩選並解決共線性的問題，也與我們的第二個目標一致(挑選出影響穩定性的重要變數)。資料經過normalize的處理。隨機選擇5000筆資料作為training data，另外5000筆作為testing data，並且同時考慮training R^2、testing R^2、training accuracy、testing accuracy以及常態假設，作為選擇模型的依據。
 
 
 1. Fitting raw data
     - 僅利用原始資料，可以發現p的4個變數的係數皆被限縮到0，代表這些變數不顯著(與Data Analysis得到相同的結論)。
+    - 因為刪去了p的四個變數，也可以確保變數沒有共線性。
     - 從normal probability plot可以發現，殘差與stab有非線性的關係(與Data Analysis得到相同的結論)。
     - 首先嘗試power transform來解決非線性的問題，如2.。
     
